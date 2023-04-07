@@ -1,3 +1,13 @@
+# CloudFlare Workers Setting Environment Variables
+DISCORD_APPLICATION_ID
+DISCORD_PUBLIC_KEY
+DISCORD_TOKEN
+
+# Github Action Setting Environment Variables
+
+CF_ACCOUNT_ID
+CLOUDFLARE_API_TOKEN
+
 # Cloudflare worker example app
 
 awwbot is an example app that brings the cuteness of `r/aww` straight to your Discord server, hosted on Cloudflare workers. Cloudflare Workers are a convenient way to host Discord bots due to the free tier, simple development model, and automatically managed environment (no VMs!).
@@ -131,7 +141,7 @@ release:
     - run: npm install
     - run: npm run publish
       env:
-        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
 ```
 
